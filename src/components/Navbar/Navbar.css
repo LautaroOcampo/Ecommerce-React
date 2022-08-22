@@ -5,7 +5,7 @@
 }
 
 .main-div{
-  height: 100vh;
+  height: 20vh;
   width: 100vw;
   background-color: rgb(255, 255, 255);
 }
@@ -26,7 +26,7 @@
 }
 
 .logo-div{
-
+  display: flex;
 }
 
 .logo{
@@ -47,10 +47,20 @@
     transition-duration: .3s;
 }
 
-.navbar-item:last-child{
-    margin-right: 200px;
-}
-
 .navbar-item:hover{
     background-color: rgb(197, 53, 53);
+}
+
+.cart{
+  font-size: 40px;
+  margin: 150px;
+  transition-duration: 1s;
+}
+
+.cart:hover{
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
 }
