@@ -1,29 +1,25 @@
+import {useState} from "react"
 import "./Main.css"
 
 
 export const ItemCount = (props) => {
     
-    
+    let [productosNum, setProductosNum] = useState(props.initial)
+
     const sumar = () => {
-        let carrito = document.getElementById("carrito")
-        if(carrito.innerText >= 1 && carrito.innerText < parseInt(props.stock)){
-            console.log(props.stock);
-            carrito.innerText++
-        }
+        if(productosNum <= props.stock)
+            setProductosNum(productosNum++)
     }
     
     const restar = () => {
-        let carrito = document.getElementById("carrito")
-        if(carrito.innerText > 1 && carrito.innerText <= parseInt(props.stock)){
-            console.log(props.stock)
-            carrito.innerText--
-        }
+        if(productosNum > 0)
+            setProductosNum(productosNum--)
     }
     
     return(
         <div className="boton-div">
             <button className="boton" onClick={sumar}>+</button>
-            <p className="numero" id="carrito">{props.initial}</p>
+            <p className="numero">{productosNum}</p>
             <button className="boton" onClick={restar}>-</button>
         </div>
     )
