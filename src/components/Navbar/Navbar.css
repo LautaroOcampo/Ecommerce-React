@@ -14,7 +14,7 @@
   position: fixed;
   height: 20vh;
   width: 100%;
-  background-color: darksalmon;
+  background-color: rgb(197, 53, 53);
   display: flex;
   justify-content: space-between;
 }
@@ -48,7 +48,7 @@
 }
 
 .navbar-item:hover{
-    background-color: rgb(197, 53, 53);
+    color: rgb(83, 83, 83);
 }
 
 .cart{

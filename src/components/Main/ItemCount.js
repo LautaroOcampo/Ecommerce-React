@@ -4,16 +4,16 @@ import "./Main.css"
 
 export const ItemCount = (props) => {
     
-    let [productosNum, setProductosNum] = useState(props.initial)
+    let [productosNum, setProductosNum] = useState(parseInt(props.initial))
 
     const sumar = () => {
-        if(productosNum <= props.stock)
-            setProductosNum(productosNum++)
+        if(productosNum < props.stock)
+            setProductosNum(productosNum+1)
     }
     
     const restar = () => {
-        if(productosNum > 0)
-            setProductosNum(productosNum--)
+        if(productosNum > 1)
+            setProductosNum(productosNum-1)
     }
     
     return(

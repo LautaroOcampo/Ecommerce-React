@@ -1,4 +1,8 @@
 
+body{
+    background-color: rgb(250, 187, 187);
+}
+
 .lorem{
     font-size: 30px;
 }
@@ -27,4 +31,33 @@
 .numero{
     font-size: 50px;
     margin: 30px;
+}
+
+.items-div{
+    display: flex;
+}
+
+.item-div{
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgb(197, 53, 53);
+    margin: 10px;
+}
+
+.item-img{
+    height: 300px;
+    width: 300px;
+}
+
+.item-h4{
+    font-size: 30px;
+}
+
+.item-p{
+    font-size: 20px;
 }

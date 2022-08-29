@@ -1,10 +1,11 @@
 import "./Main.css"
 import { ItemCount } from './ItemCount'
+import { ItemList } from "./ItemList"
 
-export const ItemListContainer = (props) => {
+export const ItemListContainer = () => {
     return(
         <>
-            <p className="lorem">{props.mensaje}</p>
+            <ItemList></ItemList>
             <ItemCount initial="1" stock="10"></ItemCount>
         </>
     )
