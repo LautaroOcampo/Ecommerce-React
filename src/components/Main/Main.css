@@ -35,6 +35,7 @@ body{
 
 .items-div{
     display: flex;
+    flex-direction: column;
 }
 
 .item-div{
@@ -47,6 +48,7 @@ body{
     align-items: center;
     border: 5px solid rgb(197, 53, 53);
     margin: 10px;
+    
 }
 
 .item-img{
