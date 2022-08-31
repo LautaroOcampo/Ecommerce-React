@@ -35,7 +35,7 @@ body{
 
 .items-div{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .item-div{
@@ -47,8 +47,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 5px solid rgb(197, 53, 53);
-    margin: 10px;
-    
+    margin: 20px 165px 20px 165px;
 }
 
 .item-img{
@@ -62,4 +61,29 @@ body{
 
 .item-p{
     font-size: 20px;
+}
+
+.detail-banner{
+    width: 100vw;
+    height: 20vh;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGHLQ1hm6xZMTs0Hvf7YRLuVw5908YLgidOIKnuHXl&s);
+    background-size:contain;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-div{
+    display: flex;
+    width:70%;
+    align-items: center;
+}
+
+.detail-img{
+    width: 200px;
+}
+
+.detail-descripcion{
+    font-size: 50px;
+    color: white;
+    font-family: 'Oooh Baby', cursive;
 }

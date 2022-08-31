@@ -2,10 +2,10 @@ import "./Main.css"
 import React, {useEffect,useState} from 'react'
 import { ItemCount } from './ItemCount'
 import { ItemList } from "./ItemList"
-import h1 from "./img/Hamburguesa simple.jpg"
-import h2 from "./img/Hamburguesa doble.jpg"
-import h3 from "./img/Hamburguesa dambo.jpg"
-import h4 from "./img/Hamburguesa roquefort.jpg"
+import h1 from "./img/Hamburguesa simple.png"
+import h2 from "./img/Hamburguesa doble.png"
+import h3 from "./img/Hamburguesa dambo.png"
+import h4 from "./img/Hamburguesa roquefort.png"
 
 export const ItemListContainer = () => {
 
@@ -53,11 +53,8 @@ export const ItemListContainer = () => {
     
     useEffect(() => {
         const funcionAsync = async ()=>{
-            
                 lista = await obtenerHamburguesas()
-                setLista(lista)  
-            
-    
+                setLista(lista)
         }
         funcionAsync()
     },[])
@@ -69,10 +66,10 @@ export const ItemListContainer = () => {
         {
             lista.length > 0 &&
             <>
-            <ItemList lista={lista}></ItemList>
+            <ItemList lista={lista}/>
             </>
         }
-            <ItemCount initial="1" stock="10"></ItemCount>
+            <ItemCount initial="1" stock="10"/>
         </>
     )
 }
