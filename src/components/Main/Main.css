@@ -1,4 +1,10 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Caveat Brush', cursive;
+}
+
 body{
     background-color: rgb(250, 187, 187);
 }
@@ -34,20 +40,20 @@ body{
 }
 
 .items-div{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto auto;
 }
 
 .item-div{
-    height: 600px;
-    width: 600px;
+    height: 450px;
+    width: 450px;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 5px solid rgb(197, 53, 53);
-    margin: 20px 165px 20px 165px;
+    margin: 70px 130px 70px 130px;
 }
 
 .item-img{
@@ -55,35 +61,31 @@ body{
     width: 300px;
 }
 
-.item-h4{
+.item-precio{
+    margin-top: 30px;
     font-size: 30px;
 }
 
-.item-p{
-    font-size: 20px;
-}
-
-.detail-banner{
-    width: 100vw;
-    height: 20vh;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGHLQ1hm6xZMTs0Hvf7YRLuVw5908YLgidOIKnuHXl&s);
-    background-size:contain;
-    display: flex;
-    justify-content: center;
-}
-
 .detail-div{
+    width: 650px;
+    height: 650px;
+    background-color: gainsboro;
     display: flex;
-    width:70%;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border: 5px solid rgb(197, 53, 53);
+}
+
+.detail-h3{
+    font-size: 50px;
 }
 
 .detail-img{
-    width: 200px;
+    width: 400px;
+    height: 400px;
 }
 
 .detail-descripcion{
-    font-size: 50px;
-    color: white;
-    font-family: 'Oooh Baby', cursive;
+    font-size: 40px;
 }

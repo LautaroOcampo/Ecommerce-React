@@ -6,8 +6,11 @@ import { ItemDetail } from './ItemDetail'
 export const ItemDetailContainer = () => {
     
     let hamburguesa = {
-        img: hamburguesaImg,
-        descripcion: "Con la carne de las mejores granjas del mundo"
+        id:1,
+        carnes:1,
+        queso:"cheddar",
+        precio:700,
+        img:hamburguesaImg
     }
 
     let [item, setItem] = useState()
@@ -29,7 +32,7 @@ export const ItemDetailContainer = () => {
     },[])
     
     return(
-    <div className='detail-banner'>
+    <div className='detail-div'>
         {
             item &&
         <>
