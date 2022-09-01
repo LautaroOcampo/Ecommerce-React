@@ -47,7 +47,7 @@ body{
 .item-div{
     height: 450px;
     width: 450px;
-    background-color: white;
+    background-color: gainsboro;
     display: flex;
     flex-direction: column;
     justify-content: center;
