@@ -1,32 +1,27 @@
 import './Main.css'
 import React, {useEffect, useState} from 'react'
-import hamburguesaImg from "./img/Hamburguesa simple.png"
 import { ItemDetail } from './ItemDetail'
+import { productos } from '../BaseDeDatos'
+import { useParams } from 'react-router-dom'
 
 export const ItemDetailContainer = () => {
     
-    let hamburguesa = {
-        id:1,
-        carnes:1,
-        queso:"cheddar",
-        precio:700,
-        img:hamburguesaImg
-    }
-
-    let [item, setItem] = useState()
+    let idProducto = parseInt(useParams().idProducto)
+    let [arrayItems, setArrayItems] = useState([])
 
     const getItem = () => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(hamburguesa)
+                resolve(productos)
             }, 2000)
         })
     }
 
     useEffect(() => {
         const funcionAsync = async ()=>{
-                item = await getItem()
-                setItem(item)  
+            arrayItems = await getItem()
+            let item = arrayItems.filter(ele => ele.id === idProducto)
+            setArrayItems(item)
         }
         funcionAsync()
     },[])
@@ -34,9 +29,9 @@ export const ItemDetailContainer = () => {
     return(
     <div className='detail-div'>
         {
-            item &&
+            arrayItems[0] &&
         <>
-        <ItemDetail item={item}/>
+        <ItemDetail item={arrayItems[0]}/>
         </>
         }
     </div>

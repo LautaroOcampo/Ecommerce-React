@@ -62,8 +62,10 @@ body{
 }
 
 .item-precio{
+    text-decoration: none; 
     margin-top: 30px;
     font-size: 30px;
+    color: black;
 }
 
 .detail-div{
@@ -75,6 +77,7 @@ body{
     justify-content: center;
     align-items: center;
     border: 5px solid rgb(197, 53, 53);
+    margin-top: 50px;
 }
 
 .detail-h3{
