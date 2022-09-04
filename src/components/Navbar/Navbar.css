@@ -30,25 +30,27 @@
 }
 
 .logo{
-    height: 20vh;
-    margin-left: 200px;
+  height: 20vh;
+  margin-left: 200px;
 }
 
 .navbar-item{
-    margin: 20px;
-    padding: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    transition-duration: .3s;
+  margin: 20px;
+  padding: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transition-duration: .3s;
+  color: black;
+  text-decoration: none;
 }
 
 .navbar-item:hover{
-    color: rgb(83, 83, 83);
+  color: rgb(83, 83, 83);
 }
 
 .cart{
