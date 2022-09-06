@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
     },[])
     
     return(
-    <div className='detail-div'>
+    <div class='detail-div'>
         {
             arrayItems[0] &&
         <>

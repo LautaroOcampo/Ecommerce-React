@@ -17,10 +17,10 @@ export const ItemCount = (props) => {
     }
     
     return(
-        <div className="boton-div">
-            <button className="boton" onClick={sumar}>+</button>
-            <p className="numero">{productosNum}</p>
-            <button className="boton" onClick={restar}>-</button>
+        <div class="boton-div">
+            <button class="boton" onClick={sumar}>+</button>
+            <p class="numero">{productosNum}</p>
+            <button class="boton" onClick={restar}>-</button>
         </div>
     )
 }

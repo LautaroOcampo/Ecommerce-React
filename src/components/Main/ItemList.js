@@ -6,10 +6,10 @@ export const ItemList = (props) => {
     
 
     return(
-            <div className="items-div">
+            <div class="items-div">
                 {props.lista.map((ele) => {
                     return(
-                    <Link to={`/${ele.id}`}>
+                    <Link key={`${ele.id}`} class="item-precio" to={`/${ele.id}`}>
                         <Item productos={ele}/>
                     </Link>
                     )
