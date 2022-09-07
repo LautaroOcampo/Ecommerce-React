@@ -68,8 +68,8 @@ body{
 }
 
 .detail-div{
-    width: 650px;
-    height: 650px;
+    width: 500px;
+    height: 500px;
     background-color: gainsboro;
     display: flex;
     flex-direction: column;
@@ -80,19 +80,28 @@ body{
 }
 
 .detail-button{
-    font-size: 30px;
+    font-size: 20px;
     width: 15vw;
-    height: 5vh;
+    height: 4vh;
     background:linear-gradient(darksalmon,rgb(197, 53, 53));
     outline: none;
     border: none;
 }
 
 .detail-img{
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
 }
 
 .detail-descripcion{
+    font-size: 25px;
+}
+
+.finalizar-button{
+    outline: none;
+    background-color: gainsboro;
     font-size: 30px;
+    margin-top: 50px;
+    height: 10vh;
+    width: 20vw;
 }
