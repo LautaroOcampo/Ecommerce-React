@@ -1,6 +1,24 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and was developed during the React JS course at CoderHouse.
+
+### Desktop Preview
+
+![Navegacion de la pagina](/GIF.gif)
+
+### Libraries used:
+
+### `React`
+
+For use of params, context and effects.
+
+### `React-Router-Dom`
+
+For routing.
+
+### `Fontawesome`
+
+For icons.
 
 ## Available Scripts
 
@@ -68,5 +86,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-![Navegacion de la pagina](/GIF.gif)
