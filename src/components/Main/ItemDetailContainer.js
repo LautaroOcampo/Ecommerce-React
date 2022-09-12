@@ -2,7 +2,7 @@ import './Main.css'
 import React, {useEffect, useState} from 'react'
 import { ItemDetail } from './ItemDetail'
 import { productos } from '../BaseDeDatos'
-import { useParams, Link} from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 
 export const ItemDetailContainer = () => {
     
@@ -28,15 +28,13 @@ export const ItemDetailContainer = () => {
     
     return(
     <>
-    <div class='detail-div'>
+    
         {
             arrayItems[0] &&
         <>
         <ItemDetail item={arrayItems[0]}/>
         </>
         }
-    </div>
-    <Link to="/cart"><button class="finalizar-button">Finalizar Compra</button></Link>
     </>
     )
 }
