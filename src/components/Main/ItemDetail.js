@@ -1,14 +1,18 @@
 import "./Main.css"
 import { ItemCount } from "./ItemCount"
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { CartContext } from "../../contexts/CartContext"
 
 export const ItemDetail = (props) => {
 
+    const {addProduct} = useContext(CartContext)
+
     let [compra, setCompra] = useState(false)
 
-    const onAdd = (msg) => {
-        console.log(`Compro ${msg} ${props.item.tipo}`)
+    const onAdd = (quantity) => {
+        let newProduct = {...props.item, quantity: quantity}
+        addProduct(newProduct)
         setCompra(true)
     }
 
@@ -20,7 +24,7 @@ export const ItemDetail = (props) => {
         <p class="detail-descripcion">{props.item.precio}$</p>
         <ItemCount initial="1" stock="10" onAdd={onAdd}/>
     </div>
-    <Link to="/cart"><button hidden={!compra} class="finalizar-button">Finalizar Compra</button></Link>
+        <Link to="/cart"><button hidden={!compra} class="finalizar-button">Finalizar Compra</button></Link>
     </>
     )
 }

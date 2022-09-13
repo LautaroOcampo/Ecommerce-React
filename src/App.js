@@ -4,12 +4,12 @@ import {ItemListContainer} from './components/Main/ItemListContainer'
 import {ItemDetailContainer} from './components/Main/ItemDetailContainer'
 import {CartContainer} from './components/Cart/CartContainer'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
-import { ThemeContext } from './contexts/ThemeContext';
+import { CartProvider } from './contexts/CartContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <ThemeContext.Provider value={{texto:"hola"}}>
+    <CartProvider>
+      <BrowserRouter>
         <Navbar/>
         <main>
         <Routes>
@@ -19,8 +19,8 @@ function App() {
           <Route path='/cart' element={<CartContainer/>}/>
         </Routes>
         </main>
-        </ThemeContext.Provider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

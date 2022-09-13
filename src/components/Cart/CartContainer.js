@@ -1,14 +1,17 @@
 import './Cart.css'
-import { ThemeContext } from '../../contexts/ThemeContext'
+import { CartContext } from '../../contexts/CartContext.js'
 import { useContext } from 'react'
+import { CartItem } from './CartItem'
 
 export const CartContainer = () => {
-    const context = useContext(ThemeContext)
+    const {productCartList} = useContext(CartContext)
     return(
-    <>
-        <p>CARRITO</p>
-        <p>{context.texto}</p>
-        
-    </>
+    <div>
+        {
+            productCartList.map((item) =>
+                <CartItem key={item.id} item={item}/>
+            )
+        }
+    </div>
     )
 }
