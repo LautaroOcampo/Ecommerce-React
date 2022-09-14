@@ -7,6 +7,7 @@ export const CartItem = (props) => {
     let {removeProduct} = useContext(CartContext)
 
     return(
+        <>
         <div class="c-item-div">
             <img class="c-item-img" src={props.item.img}></img>
             <div class="caracteristicas-div">
@@ -16,5 +17,6 @@ export const CartItem = (props) => {
                 <button onClick={() => removeProduct(props.item)}>eliminar</button>
             </div>
         </div>
+        </>
     )
 } 

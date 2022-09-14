@@ -19,3 +19,28 @@
     font-size: 20px;
     margin: 10px;
 }
+
+.c-msg-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+.c-msg{
+    margin-top: 200px;
+    font-size: 35px;
+}
+
+.c-msg-button{
+    font-size: 30px;
+    padding: 10px;
+    outline: none;
+    background-color: rgb(173, 173, 173);
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    margin-top: 50px;
+}
