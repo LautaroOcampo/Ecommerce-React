@@ -3,24 +3,32 @@ import React, {useEffect, useState} from 'react'
 import { ItemDetail } from './ItemDetail'
 import { productos } from '../BaseDeDatos'
 import { useParams} from 'react-router-dom'
+import {collection, getDocs} from 'firebase/firestore'
+import {db} from '../../utils/Firebase'
 
 export const ItemDetailContainer = () => {
     
     let idProducto = parseInt(useParams().idProducto)
     let [arrayItems, setArrayItems] = useState([])
 
-    const getItem = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productos)
-            }, 2000)
-        })
-    }
-
+    
     useEffect(() => {
+        const getItem = async () => {
+            try{
+                const query = collection(db, "Items")
+                const response = await getDocs(query)
+                const docs = response.docs
+                const data = docs.map(doc => {return{...doc.data(), id:doc.id}})
+                return data
+            }catch{
+                console.log("Ocurrio un error");
+            }
+        }
+        getItem()
+        
         const funcionAsync = async ()=>{
             arrayItems = await getItem()
-            let item = arrayItems.filter(ele => ele.id === idProducto)
+            let item = arrayItems.find(ele => parseInt(ele.id) === idProducto)
             setArrayItems(item)
         }
         funcionAsync()
@@ -30,9 +38,9 @@ export const ItemDetailContainer = () => {
     <>
     
         {
-            arrayItems[0] &&
+            arrayItems &&
         <>
-        <ItemDetail item={arrayItems[0]}/>
+        <ItemDetail item={arrayItems}/>
         </>
         }
     </>
