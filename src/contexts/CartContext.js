@@ -7,18 +7,21 @@ export const CartProvider = ({children}) => {
 
     let [productCartList, setProductCartList] = useState([])
     let [cartQuantity, setCartQuantity] = useState(0)
+    let [totalPrice, setTotalPrice] = useState(0)
 
     const addProduct = (product) => {
         if(!productCartList.some(ele => ele.id === product.id)){
             let newList = [...productCartList,product]
             setProductCartList(newList)
             setCartQuantity(cartQuantity + product.quantity)
+            setTotalPrice(totalPrice + product.precio * product.quantity)
         }else{
             let cartItem = productCartList.find(ele => ele.id === product.id)
             cartItem.quantity += product.quantity
             let newList = [...productCartList]
             setProductCartList(newList)
             setCartQuantity(cartQuantity + product.quantity)
+            setTotalPrice(totalPrice + product.precio * product.quantity)
         }
     }
 
@@ -28,15 +31,17 @@ export const CartProvider = ({children}) => {
             let newList = copyList.filter(ele => ele.id !== product.id)
             setProductCartList(newList)
             setCartQuantity(cartQuantity - product.quantity)
+            setTotalPrice(totalPrice - product.precio * product.quantity)
         }else{
             let newList = productCartList.filter(ele => ele.id !== product.id)
             setProductCartList(newList)
             setCartQuantity(cartQuantity - product.quantity)
+            setTotalPrice(totalPrice - product.precio * product.quantity)
         }
     }
 
     return(
-        <CartContext.Provider value={{productCartList, addProduct, removeProduct, cartQuantity}}>
+        <CartContext.Provider value={{productCartList, addProduct, removeProduct, cartQuantity, totalPrice}}>
             {children}
         </CartContext.Provider>
     )

@@ -1,13 +1,27 @@
 
+.c-section{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .c-item-div{
     width: 40vw;
-    height: 200px;
+    padding: 20px;
     background-color: antiquewhite;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     border: 5px solid rgb(197, 53, 53);
     margin: 20px;
+}
+
+.c-props-div{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .c-item-img{
@@ -20,11 +34,17 @@
     margin: 10px;
 }
 
+.c-button{
+    font-size: 30px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
 .c-msg-div{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    
 }
 
 .c-msg{
@@ -43,4 +63,54 @@
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
     margin-top: 50px;
+}
+
+.c-precio-total-div{
+    display: flex;
+    justify-content: flex-end;
+    width: 50vw;
+}
+
+.c-precio-total{
+    padding: 20px;
+    font-size: 27px;
+}
+
+.c-form{
+    margin-top: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(107, 107, 107);
+    margin-bottom: 180px;
+}
+
+.c-input{
+    outline: none;
+    border: none;
+    border-bottom: 3px solid rgb(197, 53, 53);
+    margin: 5px;
+    font-size: 20px;
+    width: 30vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(107, 107, 107);
+    color: white;
+}
+
+.c-input::placeholder{
+    color: rgb(192, 192, 192);
+}
+
+.c-button-form{
+    width: 20%;
+    margin-top: 20px;
+    background-color: rgb(197, 53, 53);
+    border: none;
+    border-bottom: 2px solid rgb(133, 35, 35);
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+    width: 200px;
 }
