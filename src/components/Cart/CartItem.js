@@ -1,10 +1,23 @@
 import './Cart.css'
-import { useContext } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 
 export const CartItem = (props) => {
 
     let {removeProduct} = useContext(CartContext)
+    let {addProductCart} = useContext(CartContext)
+    let {removeOneProduct} = useContext(CartContext)
+
+    let [itemQuantity, setItemQuantity] = useState()
+    let [totalItem, setTotalItem] = useState()
+
+    useEffect(() => {
+        const itemQuantityRefresh = () => {
+            setItemQuantity(props.item.quantity)
+            setTotalItem(props.item.precio * props.item.quantity)
+        }
+        itemQuantityRefresh()
+    },[props.item.quantity])
 
     return(
         <>
@@ -16,7 +29,11 @@ export const CartItem = (props) => {
                 <p class="c-item-p">{props.item.quantity} Unidades</p>
                 <p class="c-item-p">{props.item.precio}$ Cada una</p>
                 <p class="c-item-p"><b>Total: {props.item.precio * props.item.quantity}$</b></p>
-                <button class="c-button" onClick={() => removeProduct(props.item)}><i class="fa-solid fa-trash"></i></button>
+                <div class="c-buttons-div">
+                    <button class="c-button-add" onClick={() => addProductCart(props.item)}>+</button>
+                    <button class="c-button-add" onClick={() => removeOneProduct(props.item)}>-</button>
+                    <button class="c-button" onClick={() => removeProduct(props.item)}><i class="fa-solid fa-trash"></i></button>
+                </div>
             </div>
         </div>
         </>

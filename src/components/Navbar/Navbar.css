@@ -2,21 +2,31 @@
   margin: 0;
   padding: 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
 }
 
 .main-div{
   height: 20vh;
   width: 100vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(44,44,44);
+  display: flex;
+  align-items: center;
 }
 
 .navbar-div{
   position: fixed;
-  height: 20vh;
   width: 100%;
-  background-color: rgb(197, 53, 53);
+  height: 20vh;
+  background-color: rgb(44,44,44);
+  align-items: center;
   display: flex;
   justify-content: space-between;
+  border-bottom: 3px  solid rgba(44,44,44);
+  transition-duration: .5s;
+}
+
+.shadow{
+  border-bottom: 5px  solid rgba(0,0,0,.1);
 }
 
 .navbar{
@@ -27,47 +37,63 @@
 
 .logo-div{
   display: flex;
+  transition-duration: 1s;
 }
 
 .logo{
-  height: 20vh;
+  height: 15vh;
   margin-left: 200px;
+
+}
+
+.logo-div:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
 .navbar-item{
-  margin: 20px;
-  padding: 20px;
+  margin: 40px;
   font-size: 30px;
   cursor: pointer;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  transition-duration: .3s;
-  color: black;
+  color: rgb(200,200,200);
   text-decoration: none;
+  transition-duration: .3s;
 }
 
 .navbar-item:hover{
-  color: rgb(83, 83, 83);
+  color: rgb(250, 131, 95);
 }
 
 .cart-div{
   display: flex;
-  margin: 150px;
-  width: 30px;
+  margin: 0 150px 0 150px;
   flex-direction: column;
   align-items: flex-end;
+  transition-duration: 1s;
 }
 
 .cart{
   font-size: 40px;
   transition-duration: 1s;
-  color: black;
+  color: rgb(200,200,200);
 }
 
 .cart:hover{
+  color: rgb(250, 131, 95);
+}
+
+.cart-div b{
+  color: rgb(200,200,200);
+}
+
+.cart-div b:hover{
+  color: rgb(250, 131, 95);
+}
+
+.cart-div:hover{
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);

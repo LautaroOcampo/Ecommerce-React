@@ -1,4 +1,15 @@
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
 .c-section{
     width: 100vw;
     display: flex;
@@ -9,11 +20,11 @@
 .c-item-div{
     width: 40vw;
     padding: 20px;
-    background-color: antiquewhite;
+    background-color: rgb(241, 153, 126);
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    border: 5px solid rgb(197, 53, 53);
+    border: 10px solid rgb(200,200,200);
     margin: 20px;
 }
 
@@ -34,11 +45,25 @@
     margin: 10px;
 }
 
+.c-buttons-div{
+    display: flex;
+    height: 40px;
+}
+
+.c-button-add{
+    background-color: rgb(200,200,200);
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+
 .c-button{
-    font-size: 30px;
+    font-size: 29px;
     outline: none;
     border: none;
     background-color: transparent;
+    margin-left: 30px;
 }
 
 .c-msg-div{
@@ -74,6 +99,7 @@
 .c-precio-total{
     padding: 20px;
     font-size: 27px;
+    color: rgb(200,200,200);
 }
 
 .c-form{
@@ -89,7 +115,7 @@
 .c-input{
     outline: none;
     border: none;
-    border-bottom: 3px solid rgb(197, 53, 53);
+    border-bottom: 3px solid rgb(241, 153, 126);
     margin: 5px;
     font-size: 20px;
     width: 30vw;
@@ -106,9 +132,9 @@
 .c-button-form{
     width: 20%;
     margin-top: 20px;
-    background-color: rgb(197, 53, 53);
+    background-color: rgb(241, 153, 126);
     border: none;
-    border-bottom: 2px solid rgb(133, 35, 35);
+    border-bottom: 2px solid rgb(160, 103, 86);
     padding: 10px;
     color: white;
     font-size: 20px;

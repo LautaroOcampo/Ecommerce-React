@@ -1,7 +1,6 @@
 import './Main.css'
 import React, {useEffect, useState} from 'react'
 import { ItemDetail } from './ItemDetail'
-import { productos } from '../BaseDeDatos'
 import { useParams} from 'react-router-dom'
 import {collection, getDocs} from 'firebase/firestore'
 import {db} from '../../utils/Firebase'

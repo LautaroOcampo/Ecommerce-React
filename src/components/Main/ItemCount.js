@@ -19,11 +19,13 @@ export const ItemCount = (props) => {
     return(
         <>
         <div class="boton-div">
-            <button disabled={props.stock === 0} class="boton" onClick={sumar}>+</button>
-            <p class="numero">{productosNum}</p>
-            <button disabled={props.stock===0} class="boton" onClick={restar}>-</button>
+            <div class="item-count-div">
+                <button disabled={props.stock === 0} class="boton" onClick={sumar}>+</button>
+                <p class="numero">{productosNum}</p>
+                <button disabled={props.stock===0} class="boton" onClick={restar}>-</button>
+            </div>
+                <button disabled={props.stock===0} class="detail-button" onClick={() => props.onAdd(productosNum)}>Agregar al carrito</button>
         </div>
-            <button disabled={props.stock===0} class="detail-button" onClick={() => props.onAdd(productosNum)}>Agregar al carrito</button>
         </>
     )
 }

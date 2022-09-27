@@ -29,7 +29,9 @@ export const CartContainer = () => {
         }
 
         const query = collection(db, "Orders")
-        addDoc(query, order)
+        addDoc(query, order).then((response) => {
+            console.log(response.id)
+        })
     }
 
     const list = productCartList.map((item) =>
