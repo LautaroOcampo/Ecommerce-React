@@ -3,10 +3,10 @@ import { Item } from './Item'
 
 export const ItemList = (props) => {
     return(
-            <div class="items-div">
+            <div className="items-div">
                 {props.lista.map((ele) => {
                     return(
-                        <Item productos={ele}/>
+                        <Item key={ele.id} productos={ele}/>
                     )
                 })}
             </div>

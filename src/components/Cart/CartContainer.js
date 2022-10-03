@@ -5,6 +5,7 @@ import { CartItem } from './CartItem'
 import { Link } from 'react-router-dom'
 import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../../utils/Firebase'
+import Swal from 'sweetalert2'
 
 export const CartContainer = () => {
     
@@ -30,7 +31,10 @@ export const CartContainer = () => {
 
         const query = collection(db, "Orders")
         addDoc(query, order).then((response) => {
-            console.log(response.id)
+            Swal.fire({
+                title:`Tu codigo de seguimiento es ${response.id}`,
+                icon:'success'
+            })
         })
     }
 
@@ -41,28 +45,28 @@ export const CartContainer = () => {
             )
 
     return(
-    <section class="c-section">
+    <section className="c-section">
         {   
             productCartList.length > 0
             
             ?
             <>
             {list}
-            <div class="c-precio-total-div">
-                <p class="c-precio-total" >Precio Total: {totalPrice}$</p>
+            <div className="c-precio-total-div">
+                <p className="c-precio-total" >Precio Total: {totalPrice}$</p>
             </div>
-            <form class="c-form" onSubmit={buy}>
-                <input class="c-input" type="text" placeholder='Name' required></input>
-                <input class="c-input" type="number" placeholder='Phone' required></input>
-                <input class="c-input" type="email" placeholder='Email' required></input>
-                <button type="submit" class="c-button-form">Buy</button>
+            <form className="c-form" onSubmit={buy}>
+                <input className="c-input" type="text" placeholder='Name' required></input>
+                <input className="c-input" type="number" placeholder='Phone' required></input>
+                <input className="c-input" type="email" placeholder='Email' required></input>
+                <button type="submit" className="c-button-form">Buy</button>
             </form>
 
             </>
             : 
             <div class="c-msg-div">
-                <p class="c-msg">No hay productos en el carrito</p>
-                <Link to="/"><button class="c-msg-button" >Volver al menu</button></Link>
+                <p className="c-msg">No hay productos en el carrito</p>
+                <Link to="/"><button className="c-msg-button" >Volver al menu</button></Link>
             </div>
         }
     </section>

@@ -17,14 +17,14 @@ export const Navbar = () => {
     window.addEventListener("scroll",navbarChange)
 
     return(
-        <div class="main-div">
-            <div class={navbar ? "navbar-div shadow" : "navbar-div"}>
-                <div class='logo-div'>
+        <div className="main-div">
+            <div className={navbar ? "navbar-div shadow" : "navbar-div"}>
+                <div className='logo-div'>
                     <Link to="/">
                     <img className='logo' src={Logo}></img>
                     </Link>
                 </div>
-                <div class='navbar'>
+                <div className='navbar'>
                     <Link to="comidas/hamburguesas" className='navbar-item'>Hamburguesas</Link>
                     <Link to="comidas/guarniciones" className='navbar-item'>Guarnicion</Link>
                     <Link to="comidas/bebidas" className='navbar-item'>Bebida</Link>

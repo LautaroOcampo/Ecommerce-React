@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 import { ItemList } from "./ItemList"
 import {collection, getDocs} from 'firebase/firestore'
 import {db} from '../../utils/Firebase'
+import Swal from "sweetalert2"
 
 export const ItemListContainer = () => {
 
@@ -22,14 +23,16 @@ export const ItemListContainer = () => {
                 const data = docs.map(doc => {return{...doc.data(), id:doc.id}})
                 return data
             }catch{
-                console.log("Ocurrio un error");
+                Swal.fire({
+                    title: "Ocurrio un error con los datos",
+                    icon: "error"
+                })
             }
 
         }
         getData()
 
         const funcionAsync = async ()=>{
-            console.log(lista)
             lista = await getData()
             if(tipoProducto){
                 let nuevaLista = lista.filter(ele => ele.tipo === tipoProducto)
