@@ -20,7 +20,7 @@ For routing.
 
 For icons.
 
-###SweetAlert2
+### `SweetAlert2`
 
 For alerts.
 
