@@ -20,6 +20,10 @@ For routing.
 
 For icons.
 
+###SweetAlert2
+
+For alerts.
+
 ## Available Scripts
 
 In the project directory, you can run:
