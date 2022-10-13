@@ -43,6 +43,7 @@ export const CartProvider = ({children}) => {
     const addProductCart = (product) =>{
             setCartQuantity(cartQuantity + 1)
             setTotalPrice(totalPrice + product.precio)
+            console.log(product.precio)
             product.quantity += 1
     }
 
